@@ -3,7 +3,7 @@
 import { FaSearchLocation } from 'react-icons/fa';
 import { WiCloud } from 'react-icons/wi';
 import { useState } from 'react';
-import getWeatherData from './getWeatherData';
+import GetWeatherData from './getWeatherData';
 
 const WeatherCard = () => {
   const [weather, setWeather] = useState('');
@@ -16,7 +16,7 @@ const WeatherCard = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const weatherData = await getWeatherData(city);
+    const weatherData = await GetWeatherData(city);
     setWeather(weatherData);
   };
 
