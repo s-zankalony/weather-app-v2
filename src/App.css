@@ -36,8 +36,17 @@
 .card {
   padding: 2em;
   border: solid 1px #fff;
-  border-radius: 5px;
+  border-radius: 25px;
   box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.25);
+  /* box-shadow: 10px 10px 45px 0px rgba(0, 0, 0, 0.75); */
+  background: rgb(154, 190, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(154, 190, 255, 1) 1%,
+    rgba(33, 46, 56, 0.8211659663865546) 48%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  text-shadow: 6px 6px 7px rgba(0, 0, 0, 0.66);
 }
 .unit {
   display: inline-block;
@@ -49,6 +58,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow: none;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 form {
   display: flex;
@@ -57,9 +69,13 @@ form {
 }
 .city {
   height: 2rem;
+  font-size: large;
+  border: none;
+  margin-right: 5px;
 }
-h4 {
+#city-title {
   text-transform: capitalize;
+  font-size: 2rem;
 }
 .search-btn {
   width: 50px;
@@ -69,4 +85,9 @@ h4 {
   justify-content: center;
   align-items: center; */
   size: 100%;
+}
+.condition {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
 }

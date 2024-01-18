@@ -3,13 +3,14 @@ import { WiCelsius } from 'react-icons/wi';
 import { useState } from 'react';
 
 const WeatherCard = () => {
-  const [weather, setWeather] = useState([]);
+  // const [weather, setWeather] = useState([]);
   const [city, setCity] = useState('');
   const [temp, setTemp] = useState('');
   const [condition, setCondition] = useState('');
   const [icon, setIcon] = useState('');
   const [name, setName] = useState('');
   const [weatherIconSrc, setWeatherIconSRC] = useState('');
+  const weatherImage = '<img src={weatherIconSrc} />';
 
   const handleChange = (e) => {
     // e.preventDefault();
@@ -47,22 +48,23 @@ const WeatherCard = () => {
             setCondition('');
             setIcon('');
             setWeatherIconSRC('');
+            document.getElementById('city-title').style.color = 'red';
           } else {
-            setWeather(data);
-            setTemp(Math.round(data.main.temp));
-            setCondition(data.weather[0].description);
             setIcon(data.weather[0].icon);
-            setName(data.name);
             setWeatherIconSRC(
               `https://openweathermap.org/img/wn/${icon}@2x.png`
             );
+            // setWeather(data);
+            setTemp(Math.round(data.main.temp));
+            setCondition(data.weather[0].description);
+            setName(data.name);
+            document.getElementById('city-title').style.color = 'inherit';
           }
         });
     } catch (error) {
       console.log(error);
     }
   };
-  // const src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
   return (
     <div className="card">
@@ -78,9 +80,9 @@ const WeatherCard = () => {
           <FaSearchLocation />
         </button>
       </form>
-      <h4>{name}</h4>
+      <h4 id="city-title">{name}</h4>
       <div className="weather-icon">
-        <img src={weatherIconSrc ? weatherIconSrc : ''} alt={condition} />
+        <img src={weatherIconSrc} />
       </div>
       <div>
         <div className="temp">
@@ -89,7 +91,7 @@ const WeatherCard = () => {
             <WiCelsius />
           </span>
         </div>
-        <p>{condition ? condition : 'Condition'}</p>
+        <p className="condition">{condition ? condition : 'Condition'}</p>
       </div>
     </div>
   );
