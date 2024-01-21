@@ -1,12 +1,14 @@
 import './App.css';
 import WeatherCard from './components/WeatherCard';
+import Attribution from './components/Attribution';
 
 function App() {
   return (
-    <div>
+    <>
       <h1>Weather App</h1>
       <WeatherCard />
-    </div>
+      <Attribution />
+    </>
   );
 }
 

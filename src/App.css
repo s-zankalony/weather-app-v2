@@ -99,6 +99,9 @@ form {
   font-weight: 700;
   text-transform: capitalize;
 }
-#result-card, #error-card {
+/* #result-card, #error-card {
   display: none;
+} */
+#error-card {
+  color: red;
 }
