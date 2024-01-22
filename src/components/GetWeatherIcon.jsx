@@ -3,7 +3,7 @@ import { icons } from './icons';
 
 export function GetWeatherIcon({ id }) {
   const weatherIcon = icons.find((weatherIcon) => weatherIcon.id === id);
-  console.log(weatherIcon.icon);
+  // console.log(weatherIcon.icon);
   if (!weatherIcon) {
     return null;
   }

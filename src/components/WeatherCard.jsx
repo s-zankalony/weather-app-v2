@@ -1,5 +1,5 @@
 import { WiCelsius } from 'react-icons/wi';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { SearchCard } from './SearchCard';
 import { GetWeatherIcon } from './GetWeatherIcon';
 
@@ -10,12 +10,13 @@ const WeatherCard = () => {
     condition: '',
     iconId: '',
     name: '',
+    country: '',
     weatherIconSrc: '',
     hasError: false,
     message: '',
     initial: true,
   });
-  console.log(weatherData);
+  // console.log(weatherData);
 
   const handleChange = (e) => {
     setCity(e.target.value);
@@ -37,6 +38,7 @@ const WeatherCard = () => {
           ...weatherData,
           message: data.message,
           hasError: true,
+          initial: false,
         });
       } else {
         setWeatherData({
@@ -44,6 +46,7 @@ const WeatherCard = () => {
           condition: data.weather[0].description,
           iconId: data.weather[0].icon,
           name: data.name,
+          country: data.sys.country,
           weatherIconSrc: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
           hasError: false,
           initial: false,
@@ -71,12 +74,14 @@ const WeatherCard = () => {
           </div>
         ) : (
           <div id="result-card" className="card">
-            <h4 id="city-title">{name}</h4>
+            <h4 id="city-title">
+              {weatherData.name}, {weatherData.country}
+            </h4>
 
             <div className="weather-icon">
-              <img src={weatherData.weatherIconSrc} alt="weather icon" />
-
-              <GetWeatherIcon id={weatherData.iconId} />
+              {<GetWeatherIcon id={weatherData.iconId} /> ?? (
+                <img src={weatherData.weatherIconSrc} alt="weather icon" />
+              )}
             </div>
 
             <div>
