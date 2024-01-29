@@ -24,13 +24,15 @@ const WeatherCard = () => {
 
   const getWeatherData = async (e) => {
     e.preventDefault();
-    const myApi = import.meta.env.VITE_API_KEY;
-    const url = import.meta.env.VITE_API_URL;
+    // const myApi = import.meta.env.VITE_API_KEY;
+    // const url = import.meta.env.VITE_API_URL;
+
+    // const backendServer = import.meta.env.VITE_BACKEND_SERVER;
+    let backendServer = new URL(import.meta.env.VITE_BACKEND_SERVER);
+    backendServer.search = new URLSearchParams({ city: city });
 
     try {
-      const response = await fetch(
-        `${url}/weather?q=${city}&appid=${myApi}&units=metric`
-      );
+      const response = await fetch(backendServer);
       const data = await response.json();
 
       if (data.message) {
