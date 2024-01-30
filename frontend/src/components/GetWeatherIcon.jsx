@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { icons } from './icons';
 
 export function GetWeatherIcon({ id }) {
@@ -14,6 +14,6 @@ export function GetWeatherIcon({ id }) {
     </div>
   );
 }
-GetWeatherIcon.propTypes = {
-  id: PropTypes.string,
-};
+// GetWeatherIcon.propTypes = {
+//   id: PropTypes.string,
+// };

@@ -16,6 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set('Access-Control-Allow-Origin', '*');
 
+app.use(express.static('public'));
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());

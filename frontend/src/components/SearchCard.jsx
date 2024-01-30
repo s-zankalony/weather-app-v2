@@ -20,7 +20,7 @@ export function SearchCard({ getData, handleChange }) {
     </div>
   );
 }
-SearchCard.propTypes = {
-  getData: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired,
-};
+// SearchCard.propTypes = {
+//   getData: PropTypes.func.isRequired,
+//   handleChange: PropTypes.func.isRequired,
+// };
