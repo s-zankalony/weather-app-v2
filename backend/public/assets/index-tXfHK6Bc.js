@@ -9262,7 +9262,7 @@ const Zd = () => {
       },
       i = async (o) => {
         o.preventDefault();
-        let u = new URL('http://localhost:3001');
+        let u = new URL('http://localhost:3001/api/v1/weather');
         u.search = new URLSearchParams({ city: e });
         try {
           const c = await (await fetch(u)).json();
