@@ -1,74 +1,74 @@
 export const icons = [
   {
     id: '01d',
-    icon: 'src/assets/icons/clear_sky.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832357/clear_sky_gr1utu.svg',
   },
   {
     id: '01n',
-    icon: 'src/assets/icons/night.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832351/night_fxcjbw.svg',
   },
   {
     id: '02d',
-    icon: 'src/assets/icons/few_clouds_w_sun.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832352/few_clouds_w_sun_dligfx.svg',
   },
   {
     id: '02n',
-    icon: 'src/assets/icons/night_cloud_2.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832349/night_cloud_2_okcnek.svg',
   },
   {
     id: '03d',
-    icon: 'src/assets/icons/clouds_no_sun.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832356/clouds_no_sun_ni9ity.svg',
   },
   {
     id: '03n',
-    icon: 'src/assets/icons/clouds_2.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832357/clouds_2_ml9ck9.svg',
   },
   {
     id: '04d',
-    icon: 'src/assets/icons/broken_clouds.svg',
+    icon: 'public/icons/broken_clouds.svghttps://res.cloudinary.com/dwzarisi4/image/upload/v1709832357/broken_clouds_kpddb9.svg',
   },
   {
     id: '04n',
-    icon: 'src/assets/icons/night_cloud_2.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832349/night_cloud_2_okcnek.svg',
   },
   {
     id: '09d',
-    icon: 'src/assets/icons/clouds_with_rain.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832356/clouds_with_rain_ttcibp.svg',
   },
   {
     id: '09n',
-    icon: 'src/assets/icons/black_cloud_with_rain.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832358/black_cloud_with_rain_v15csi.svg',
   },
   {
     id: '10d',
-    icon: 'src/assets/icons/rain.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832349/rain_ecmk3p.svg',
   },
   {
     id: '10n',
-    icon: 'src/assets/icons/black_cloud_with_rain.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832358/black_cloud_with_rain_v15csi.svg',
   },
   {
     id: '11d',
-    icon: 'src/assets/icons/thunder_storm_w_rain.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832344/thunder_storm_w_rain_t3cacv.svg',
   },
   {
     id: '11n',
-    icon: 'src/assets/icons/thunder_storm_black_cloud.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832344/thunder_storm_black_cloud_zepeka.svg',
   },
   {
     id: '13d',
-    icon: 'src/assets/icons/snowflakes.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832346/snowflakes_ypmrie.svg',
   },
   {
     id: '13n',
-    icon: 'src/assets/icons/snowflakes.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832346/snowflakes_ypmrie.svg',
   },
   {
     id: '50d',
-    icon: 'src/assets/icons/mist.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832351/mist_yrs2nz.svg',
   },
   {
     id: '50n',
-    icon: 'src/assets/icons/mist.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832351/mist_yrs2nz.svg',
   },
 ];

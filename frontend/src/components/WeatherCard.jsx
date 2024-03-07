@@ -24,7 +24,7 @@ const WeatherCard = () => {
 
   const getWeatherData = async (e) => {
     e.preventDefault();
-    let backendServer = new URL(import.meta.env.VITE_BACKEND_SERVER);
+    let backendServer = new URL('http://localhost:3000/api/v1/weather');
     backendServer.search = new URLSearchParams({ city: city });
 
     try {
