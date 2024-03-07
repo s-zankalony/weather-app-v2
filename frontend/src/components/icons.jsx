@@ -65,10 +65,10 @@ export const icons = [
   },
   {
     id: '50d',
-    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832351/mist_yrs2nz.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/c_scale,w_100/v1709832351/mist_yrs2nz.svg',
   },
   {
     id: '50n',
-    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832351/mist_yrs2nz.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/c_scale,w_100/v1709832351/mist_yrs2nz.svg',
   },
 ];
