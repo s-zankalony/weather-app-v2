@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "setup-build": "npm i && cd frontend && npm i && npm run build",
-    "setup-deploy": "npm i && cd frontend && npm i",
+    "setup-initial": "npm i && cd frontend && npm i",
     "preview": "npm run setup-build && npm run start"
   },
   "dependencies": {
