@@ -2,6 +2,7 @@ import { WiCelsius } from 'react-icons/wi';
 import { useState } from 'react';
 import { SearchCard } from './SearchCard';
 import { GetWeatherIcon } from './GetWeatherIcon';
+import axios from 'axios';
 
 const WeatherCard = () => {
   const [city, setCity] = useState('');
@@ -24,35 +25,38 @@ const WeatherCard = () => {
 
   const getWeatherData = async (e) => {
     e.preventDefault();
-    let backendServer = new URL('http://localhost:3000/api/v1/weather');
-    backendServer.search = new URLSearchParams({ city: city });
+    const backendServer = '/api/v1/weather';
+    const searchParams = new URLSearchParams({ city: city }).toString();
+
+    const customAxios = axios.create({
+      baseURL: backendServer,
+    });
 
     try {
-      const response = await fetch(backendServer);
-      const data = await response.json();
+      const response = await customAxios.get(`/?${searchParams}`);
+      const data = await response.data;
+      // console.log(data);
 
-      if (data.message) {
+      setWeatherData({
+        temp: Math.round(data.main.temp),
+        condition: data.weather[0].description,
+        iconId: data.weather[0].icon,
+        name: data.name,
+        country: data.sys.country,
+        weatherIconSrc: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+        hasError: false,
+        initial: false,
+      });
+      console.log(weatherData);
+    } catch (error) {
+      if (error.response && error.response.status === 404) {
         setWeatherData({
           ...weatherData,
-          message: data.message,
+          message: error.response.data.message,
           hasError: true,
           initial: false,
         });
-      } else {
-        setWeatherData({
-          temp: Math.round(data.main.temp),
-          condition: data.weather[0].description,
-          iconId: data.weather[0].icon,
-          name: data.name,
-          country: data.sys.country,
-          weatherIconSrc: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
-          hasError: false,
-          initial: false,
-        });
       }
-    } catch (error) {
-      console.log(error);
-      setWeatherData({ ...weatherData, hasError: true, message: error });
     }
   };
   if (weatherData.initial === true) {

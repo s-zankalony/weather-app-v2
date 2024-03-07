@@ -25,7 +25,7 @@ export const icons = [
   },
   {
     id: '04d',
-    icon: 'public/icons/broken_clouds.svghttps://res.cloudinary.com/dwzarisi4/image/upload/v1709832357/broken_clouds_kpddb9.svg',
+    icon: 'https://res.cloudinary.com/dwzarisi4/image/upload/v1709832357/broken_clouds_kpddb9.svg',
   },
   {
     id: '04n',
