@@ -4,6 +4,8 @@ App is built using Node.js forbackend & React.js for frontend
 
 ## How to run locally
 
+Use Node.js 22.12 or newer (CI covers Node 22 and 24). `npm run dev` uses Node’s built-in watch mode.
+
 - Clone the repo to your machine
 
 - Run:
